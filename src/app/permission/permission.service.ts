@@ -60,6 +60,22 @@ export class PermissionService {
     this.level = level;
   }
 
+  getPlatformUrl() {
+    return this.platformUrl;
+  }
+
+  getDomain() {
+    return this.domain;
+  }
+
+  getService() {
+    return this.service;
+  }
+
+  getLevel() {
+    return this.level;
+  }
+
   /**
   * Default method for getting actions permissions accordingly with the current user
   * OBS: to run in development mode it's necessary to change it using the setDevelopmentMode method
@@ -67,8 +83,8 @@ export class PermissionService {
   * @param config - used to override the 'this' config above which contains the url, user, resource, domain, service and so on.
   */
   getPermissionTo(action, config = {}): Observable<any> {
-    if (!action) console.log("You must specify an action");
-    if (!config['resource']) console.log("You must specify a 'resource' attribute");
+    if (!action) return Observable.throw("You must specify an action");
+    if (!config['resource']) return Observable.throw("You must specify a 'resource' attribute");
 
     //optionals
     const platformUrl = config['platformUrl'] || this.platformUrl;

@@ -1,8 +1,8 @@
 This project is forked from https://github.com/heltonandreazza/my-third-lib-seed.git.
 
-# UserPermissions
+# G7-user-permission - PermissionService
 
-The UserPermissions is service that provides methods for G7 platform permissions for Angular 2 projects.
+The PermissionService is service that provides methods for G7 platform permissions for Angular 2 projects.
 
 ## How it works
 
